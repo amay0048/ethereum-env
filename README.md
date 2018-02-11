@@ -1,7 +1,13 @@
-# Environments
+# Environment
 
-Ethereum Docker Local Cluster
-https://capgemini.github.io/blockchain/ethereum-docker-compose/
+Local test net
+- https://github.com/Capgemini-AIE/ethereum-docker
+- https://capgemini.github.io/blockchain/ethereum-docker-compose/
+
+Once this is up, vai the geth cli
+- `eth.defaultAccount = eth.accounts[0]` sets the default account when abi transactions require gas
+- `personal.unlockAccount(address, "password", inUnlockPeriod)` -> `personal.unlockAccount(eth.accounts[0], "", 0)` unlocks the account so that transactions requiring gas can be executed
+
 With the current version of Docker OSX, the timezone files need to be included. Tried a couple of configurations here
 but it seems the simplest solution for now is to link the files directly e.g.
 
